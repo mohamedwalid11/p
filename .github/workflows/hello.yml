@@ -1,10 +1,13 @@
-name: Hello World
+name: test-workflow
 
-on: [push]
+on:
+  push:
+    branches: ["main"]
 
 jobs:
-  say-hello:
+  test-job:
     runs-on: ubuntu-latest
-    steps :
-      - name: Print a greeting
-      - run: echo "Hello From Github Action"
+
+    steps:
+      - name: Echo Hello
+        run: echo "Hello world"
